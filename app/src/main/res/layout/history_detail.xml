@@ -106,13 +106,15 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/round_orange_button_background"
                     android:contentDescription="@string/content_description_chat"
-                    android:src="@drawable/chat_start_default" />
+                    android:src="@drawable/chat_start_default"
+                    android:visibility="gone" />
 
                 <RelativeLayout
                     android:id="@+id/chat_secured"
                     android:layout_width="65dp"
                     android:layout_height="60dp"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="60dp"
