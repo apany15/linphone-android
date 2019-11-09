@@ -24,3 +24,5 @@ linphone-sdk-android/*.aar
 app/release
 keystore.properties
 app/src/main/res/xml/contacts.xml
+app/homeatom-keystore.jks
+app/google-services.json
