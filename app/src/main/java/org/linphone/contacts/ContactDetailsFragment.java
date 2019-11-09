@@ -22,8 +22,6 @@ package org.linphone.contacts;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.Fragment;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,7 +41,6 @@ import org.linphone.core.ChatRoomListenerStub;
 import org.linphone.core.ChatRoomParams;
 import org.linphone.core.Core;
 import org.linphone.core.Factory;
-import org.linphone.core.FriendCapability;
 import org.linphone.core.PresenceBasicStatus;
 import org.linphone.core.PresenceModel;
 import org.linphone.core.ProxyConfig;
@@ -264,7 +261,7 @@ public class ContactDetailsFragment extends Fragment implements ContactsUpdatedL
                 }
             }
 
-            v.findViewById(R.id.inviteFriend).setVisibility(View.GONE);
+            /*v.findViewById(R.id.inviteFriend).setVisibility(View.GONE);
             if (!noa.isSIPAddress()
                     && v.findViewById(R.id.friendLinphone).getVisibility() == View.GONE
                     && !getResources().getBoolean(R.bool.hide_invite_contact)) {
@@ -288,7 +285,7 @@ public class ContactDetailsFragment extends Fragment implements ContactsUpdatedL
                                         startActivity(smsIntent);
                                     }
                                 });
-            }
+            }*/
 
             String contactAddress = mContact.getContactFromPresenceModelForUriOrTel(noa.getValue());
 
@@ -311,7 +308,7 @@ public class ContactDetailsFragment extends Fragment implements ContactsUpdatedL
                 v.findViewById(R.id.contact_call).setVisibility(View.GONE);
             }
 
-            v.findViewById(R.id.contact_chat)
+            /*v.findViewById(R.id.contact_chat)
                     .setOnClickListener(
                             new OnClickListener() {
                                 @Override
@@ -349,7 +346,7 @@ public class ContactDetailsFragment extends Fragment implements ContactsUpdatedL
             if (getResources().getBoolean(R.bool.disable_chat)) {
                 v.findViewById(R.id.contact_chat).setVisibility(View.GONE);
                 v.findViewById(R.id.contact_chat_secured).setVisibility(View.GONE);
-            }
+            }*/
 
             if (!skip) {
                 controls.addView(v);

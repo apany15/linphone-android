@@ -10,25 +10,40 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/hang_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/hangup"
         android:contentDescription="@string/content_description_hang_up"
         android:padding="12dp"
-        android:src="@drawable/call_hangup" />
+        android:src="@drawable/call_hangup" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/vertical_divider">
+        <ImageView
+            android:id="@+id/hang_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hangup"
+            android:contentDescription="@string/content_description_hang_up"
+            android:padding="12dp"
+            android:src="@drawable/call_hangup" />
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toLeftOf="@id/vertical_divider">
 
-        <View
+        <!--<View
             android:id="@+id/left_vertical_divider"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true" />-->
 
         <ImageView
             android:id="@+id/dialer"
@@ -39,7 +54,6 @@
             android:contentDescription="@string/content_description_numpad"
             android:padding="15dp"
             android:src="@drawable/footer_dialer" />
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -51,13 +65,14 @@
             android:id="@+id/right_vertical_divider"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/right_vertical_divider"
-            android:background="@drawable/footer_button">
+            android:background="@drawable/footer_button"
+            android:visibility="gone" >
 
             <ImageView
                 android:id="@+id/chat"

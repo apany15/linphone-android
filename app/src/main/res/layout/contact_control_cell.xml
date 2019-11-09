@@ -42,7 +42,7 @@
                 android:src="@drawable/linphone_user"
                 android:visibility="gone" />
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/inviteFriend"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -51,7 +51,7 @@
                 android:layout_marginRight="10dp"
                 android:text="@string/invite_friend"
                 android:textAppearance="@style/contact_invite_font"
-                android:visibility="gone" />
+                android:visibility="gone" />-->
 
         </RelativeLayout>
 
@@ -81,7 +81,7 @@
                 android:contentDescription="@string/content_description_call"
                 android:src="@drawable/call_start_default" />
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/contact_chat"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -113,7 +113,7 @@
                     android:layout_alignParentRight="true"
                     android:src="@drawable/security_toogle_icon_green" />
 
-            </RelativeLayout>
+            </RelativeLayout>-->
 
         </LinearLayout>
 

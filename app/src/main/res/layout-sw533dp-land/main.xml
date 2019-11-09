@@ -188,7 +188,8 @@
                     android:layout_width="60dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:background="@drawable/footer_button">
+                    android:background="@drawable/footer_button"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="match_parent"

@@ -36,7 +36,7 @@ public class MenuAssistantActivity extends AssistantActivity {
 
         setContentView(R.layout.assistant_menu);
 
-        TextView accountCreation = findViewById(R.id.account_creation);
+        /*TextView accountCreation = findViewById(R.id.account_creation);
         accountCreation.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -56,9 +56,9 @@ public class MenuAssistantActivity extends AssistantActivity {
                         }
                         startActivity(intent);
                     }
-                });
+                });*/
 
-        TextView accountConnection = findViewById(R.id.account_connection);
+        /*TextView accountConnection = findViewById(R.id.account_connection);
         accountConnection.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -68,10 +68,10 @@ public class MenuAssistantActivity extends AssistantActivity {
                                         MenuAssistantActivity.this,
                                         AccountConnectionAssistantActivity.class));
                     }
-                });
-        if (getResources().getBoolean(R.bool.hide_linphone_accounts_in_assistant)) {
+                });*/
+        /*if (getResources().getBoolean(R.bool.hide_linphone_accounts_in_assistant)) {
             accountConnection.setVisibility(View.GONE);
-        }
+        }*/
 
         TextView genericConnection = findViewById(R.id.generic_connection);
         genericConnection.setOnClickListener(
@@ -88,7 +88,7 @@ public class MenuAssistantActivity extends AssistantActivity {
             genericConnection.setVisibility(View.GONE);
         }
 
-        TextView remoteConfiguration = findViewById(R.id.remote_configuration);
+        /*TextView remoteConfiguration = findViewById(R.id.remote_configuration);
         remoteConfiguration.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -98,10 +98,10 @@ public class MenuAssistantActivity extends AssistantActivity {
                                         MenuAssistantActivity.this,
                                         RemoteConfigurationAssistantActivity.class));
                     }
-                });
-        if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
+                });*/
+        /*if (getResources().getBoolean(R.bool.hide_remote_provisioning_in_assistant)) {
             remoteConfiguration.setVisibility(View.GONE);
-        }
+        }*/
 
         if (getResources().getBoolean(R.bool.assistant_use_linphone_login_as_first_fragment)) {
             startActivity(

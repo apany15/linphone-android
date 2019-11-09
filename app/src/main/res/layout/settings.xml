@@ -63,7 +63,8 @@
             android:id="@+id/pref_chat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            linphone:title="@string/pref_chat_title"/>
+            linphone:title="@string/pref_chat_title"
+            android:visibility="gone"/>
 
         <org.linphone.settings.widget.BasicSetting
             android:id="@+id/pref_network"
