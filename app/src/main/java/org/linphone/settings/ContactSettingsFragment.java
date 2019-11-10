@@ -103,16 +103,17 @@ public class ContactSettingsFragment extends SettingsFragment {
                 new SettingListenerBase() {
                     @Override
                     public void onBoolValueChanged(boolean newValue) {
-                        mPrefs.enabledFriendlistSubscription(newValue);
+                        // mPrefs.enabledFriendlistSubscription(newValue);
+                        mPrefs.enabledFriendlistSubscription(false);
                         // Synchronization of the buttons between them, possibility to click on :
                         // "presence information"... only if "is friends subscript on enabled" is
                         // active
                         mContactPresenceNativeContact.setEnabled(
                                 mPrefs.isFriendlistsubscriptionEnabled());
 
-                        if (!newValue) {
-                            mContactPresenceNativeContact.setChecked(false);
-                        }
+                        // if (!newValue) {
+                        mContactPresenceNativeContact.setChecked(false);
+                        // }
                     }
                 });
 

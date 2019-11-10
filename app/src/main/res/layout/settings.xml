@@ -76,7 +76,8 @@
             android:id="@+id/pref_contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            linphone:title="@string/pref_contact_title"/>
+            linphone:title="@string/pref_contact_title"
+            android:visibility="gone"/>
 
         <org.linphone.settings.widget.BasicSetting
             android:id="@+id/pref_advanced"

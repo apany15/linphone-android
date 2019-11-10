@@ -16,7 +16,10 @@ size=vga
 tunnel=disabled
 push_notification=1
 auto_start=1
-friendlist_subscription_enabled=disabled
+friendlist_subscription_enabled=false
+store_presence_in_native_contact=false
+display_contact_organization=false
+shortcuts=false
 
 [tunnel]
 host=

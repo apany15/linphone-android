@@ -430,7 +430,10 @@ public class LinphonePreferences {
             getConfig().setBool("app", "friendlist_subscription_enabled", false);
             enabledFriendlistSubscription(true);
         }
-        return getLc().isFriendListSubscriptionEnabled();
+        // return getLc().isFriendListSubscriptionEnabled();
+        getConfig().setBool("app", "friendlist_subscription_enabled", false);
+        enabledFriendlistSubscription(false);
+        return false;
     }
 
     public void enabledFriendlistSubscription(boolean enabled) {
@@ -438,7 +441,8 @@ public class LinphonePreferences {
     }
 
     public boolean isPresenceStorageInNativeAndroidContactEnabled() {
-        return getConfig().getBool("app", "store_presence_in_native_contact", false);
+        // return getConfig().getBool("app", "store_presence_in_native_contact", false);
+        return false;
     }
 
     public void enabledPresenceStorageInNativeAndroidContact(boolean enabled) {
@@ -1189,7 +1193,8 @@ public class LinphonePreferences {
     }
 
     public boolean shortcutsCreationEnabled() {
-        return getConfig().getBool("app", "shortcuts", false);
+        // return getConfig().getBool("app", "shortcuts", false);
+        return false;
     }
 
     public void enableChatRoomsShortcuts(boolean enable) {
