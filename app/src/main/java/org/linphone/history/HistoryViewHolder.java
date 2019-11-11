@@ -19,6 +19,7 @@
  */
 package org.linphone.history;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -31,6 +32,7 @@ import org.linphone.R;
 public class HistoryViewHolder extends RecyclerView.ViewHolder
         implements View.OnClickListener, View.OnLongClickListener {
     public final TextView contact;
+    public final TextView contact_date;
     public final ImageView detail;
     public final CheckBox select;
     public final ImageView callDirection;
@@ -39,9 +41,12 @@ public class HistoryViewHolder extends RecyclerView.ViewHolder
     public final TextView separatorText;
 
     private final ClickListener mListener;
+    public final Context mContext;
 
     public HistoryViewHolder(View view, ClickListener listener) {
         super(view);
+        mContext = view.getContext();
+        contact_date = view.findViewById(R.id.sip_uri_date);
         contact = view.findViewById(R.id.sip_uri);
         detail = view.findViewById(R.id.detail);
         select = view.findViewById(R.id.delete);

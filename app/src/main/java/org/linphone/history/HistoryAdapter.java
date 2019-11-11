@@ -20,6 +20,7 @@
 package org.linphone.history;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,6 +73,13 @@ public class HistoryAdapter extends SelectableAdapter<HistoryViewHolder> {
         CallLog log = mLogs.get(position);
         long timestamp = log.getStartDate() * 1000;
         final Address address;
+        Context context = holder.mContext;
+        holder.contact_date.setText(
+                LinphoneUtils.timestampToHumanDate(
+                        context,
+                        log.getStartDate(),
+                        context.getString(R.string.history_detail_date_format))
+        );
 
         holder.contact.setSelected(true); // For automated horizontal scrolling of long texts
         Calendar logTime = Calendar.getInstance();
@@ -126,7 +134,8 @@ public class HistoryAdapter extends SelectableAdapter<HistoryViewHolder> {
             ContactAvatar.displayAvatar(holder.contact.getText().toString(), holder.avatarLayout);
         }
 
-        holder.detail.setVisibility(isEditionEnabled() ? View.INVISIBLE : View.VISIBLE);
+        // holder.detail.setVisibility(isEditionEnabled() ? View.INVISIBLE : View.VISIBLE);
+        holder.detail.setVisibility(View.INVISIBLE);
         holder.detail.setOnClickListener(
                 !isEditionEnabled()
                         ? new View.OnClickListener() {

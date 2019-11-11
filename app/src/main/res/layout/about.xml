@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="HOMEATOM EDITION" />
+                android:text="MY EDITION" />
 
             <!--<TextView
                 android:textSize="13sp"
