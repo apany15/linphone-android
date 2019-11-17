@@ -74,12 +74,11 @@ public class HistoryAdapter extends SelectableAdapter<HistoryViewHolder> {
         long timestamp = log.getStartDate() * 1000;
         final Address address;
         Context context = holder.mContext;
-        holder.contact_date.setText(
+        holder.history_time.setText(
                 LinphoneUtils.timestampToHumanDate(
                         context,
                         log.getStartDate(),
-                        context.getString(R.string.history_detail_date_format))
-        );
+                        context.getString(R.string.history_detail_time_format)));
 
         holder.contact.setSelected(true); // For automated horizontal scrolling of long texts
         Calendar logTime = Calendar.getInstance();
@@ -135,7 +134,7 @@ public class HistoryAdapter extends SelectableAdapter<HistoryViewHolder> {
         }
 
         // holder.detail.setVisibility(isEditionEnabled() ? View.INVISIBLE : View.VISIBLE);
-        holder.detail.setVisibility(View.INVISIBLE);
+        /*holder.detail.setVisibility(View.INVISIBLE);
         holder.detail.setOnClickListener(
                 !isEditionEnabled()
                         ? new View.OnClickListener() {
@@ -144,7 +143,7 @@ public class HistoryAdapter extends SelectableAdapter<HistoryViewHolder> {
                                 mActivity.showHistoryDetails(address);
                             }
                         }
-                        : null);
+                        : null);*/
     }
 
     @Override
